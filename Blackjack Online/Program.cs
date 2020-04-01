@@ -10,7 +10,9 @@ namespace Blackjack_Online
     {
         static void Main(string[] args)
         {
-//"Olof is testing"
+            //"Olof is testing"
+
+            Console.WriteLine("");
         }
     }
 }
