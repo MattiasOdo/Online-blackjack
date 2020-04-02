@@ -10,6 +10,12 @@ namespace Blackjack_Online
     {
         static void Main(string[] args)
         {
+            Carddeck firstcarddeck = new Carddeck();
+            firstcarddeck.PrintCarddeck();
+            Console.WriteLine("-----");
+            firstcarddeck.ShuffleCards();
+            firstcarddeck.PrintCarddeck();
+
         }
     }
 }
