@@ -10,7 +10,7 @@ namespace Blackjack_Online
     {
         public string card;
         private int color;
-        private int value;
+        public int value;
         int sum = 0;
 
         public Card()
@@ -160,6 +160,11 @@ namespace Blackjack_Online
             }
         }
 
+        public void printvalue()
+        {
+            Console.WriteLine(value);
+
+        }
         public void Printcard()
         {
             Console.WriteLine(card);

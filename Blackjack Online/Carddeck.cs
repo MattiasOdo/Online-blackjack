@@ -10,6 +10,17 @@ namespace Blackjack_Online
     {
         List<Card> Cards;
 
+        public Card gettopcard()
+        {
+
+            Card c = Cards[0];
+            Cards.RemoveAt(0);
+
+
+            return c;
+
+        }
+
         public Carddeck()
         {
             Cards = new List<Card>();
@@ -56,6 +67,27 @@ namespace Blackjack_Online
             }
 
             return null;
+        }
+        public void PrintCard()
+        {
+            {
+                Random random = new Random();
+
+                for (int i = 0; i < 1000; i++)
+                {
+                    int a = random.Next(0, 52);
+                    int b = random.Next(0, 52);
+
+                    Card temp = Cards[a];
+                    Cards[a] = Cards[b];
+                    Cards[b] = temp;
+                }
+                for (int i = 0; i < 1; i++)
+                {
+                    Cards[i].Printcard();
+                }
+            }
+           
         }
     }
 }

@@ -10,20 +10,20 @@ namespace Blackjack_Online
     {
         static void Main(string[] args)
         {
-            Carddeck carddeck = new Carddeck();
-            Card card = new Card();
 
+            Carddeck carddeck = new Carddeck();
+            
             Console.WriteLine("Välkommen till scam city. Vill du spela? (ja/nej)");
             string choice = Console.ReadLine();
             if (choice == "ja")
             {
-                carddeck.ShuffleCards();
-                carddeck.PrintCarddeck();
-                Console.WriteLine("---------");
-                carddeck.DrawCard();
-                carddeck.PrintCarddeck();
-                carddeck.DrawCard();
-                card.Printcard();
+
+                Card c = carddeck.gettopcard();
+                c.printvalue();
+                //carddeck.PrintCard();
+                //carddeck.PrintCard();
+
+                
 
             }
         }
