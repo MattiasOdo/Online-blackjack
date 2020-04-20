@@ -11,7 +11,7 @@ namespace Blackjack_Online
         static void Main(string[] args)
         {
             Carddeck carddeck = new Carddeck();
-            Card newcard = new Card();
+            Card card = new Card();
 
             Console.WriteLine("Välkommen till scam city. Vill du spela? (ja/nej)");
             string choice = Console.ReadLine();
@@ -19,6 +19,11 @@ namespace Blackjack_Online
             {
                 carddeck.ShuffleCards();
                 carddeck.PrintCarddeck();
+                Console.WriteLine("---------");
+                carddeck.DrawCard();
+                carddeck.PrintCarddeck();
+                carddeck.DrawCard();
+                card.Printcard();
 
             }
         }
