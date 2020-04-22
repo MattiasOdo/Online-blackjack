@@ -160,14 +160,16 @@ namespace Blackjack_Online
             }
         }
 
-        public void printvalue()
-        {
-            Console.WriteLine(value);
-
-        }
+  
         public void Printcard()
         {
             Console.WriteLine(card);
+        }
+        public void printvalue()
+        {
+            
+            Console.WriteLine(value);
+
         }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Blackjack_Online
 {
-    class Carddeck
+    class Carddeck:Card
     {
         List<Card> Cards;
 
         public Card gettopcard()
         {
 
-            Card c = Cards[0];
-            Cards.RemoveAt(0);
+            Card c = Cards[2];
+            Cards.RemoveAt(2);
 
 
             return c;
