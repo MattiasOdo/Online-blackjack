@@ -13,8 +13,8 @@ namespace Blackjack_Online
         public Card gettopcard()
         {
 
-            Card c = Cards[2];
-            Cards.RemoveAt(2);
+            Card c = Cards[1];
+            Cards.RemoveAt(1);
 
 
             return c;
@@ -85,7 +85,10 @@ namespace Blackjack_Online
                 for (int i = 0; i < 1; i++)
                 {
                     Cards[i].Printcard();
+                    
+                    
                 }
+               
             }
            
         }
