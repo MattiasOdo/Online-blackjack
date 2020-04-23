@@ -165,10 +165,10 @@ namespace Blackjack_Online
         {
             Console.WriteLine(card);
         }
-        public void printvalue()
+        public void PrintValue()
         {
-            
             Console.WriteLine(value);
+            
 
         }
     }

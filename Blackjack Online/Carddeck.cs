@@ -10,15 +10,15 @@ namespace Blackjack_Online
     {
         List<Card> Cards;
 
-        public Card gettopcard()
+        public Card GetFirstCard()
         {
-
-            Card c = Cards[1];
-            Cards.RemoveAt(1);
-
-
-            return c;
-
+            if (Cards.Count != 0)
+            {
+                Card c = Cards[0];
+                Cards.RemoveAt(0);
+                return c;
+            }
+            return null;
         }
 
         public Carddeck()
@@ -57,42 +57,7 @@ namespace Blackjack_Online
                 Cards[b] = temp;
             }
         }
-        public Card DrawCard()
-        {
-            if (Cards.Count != 0)
-            {
-                Card tempCard = Cards[0];
-                Cards.RemoveAt(0);
-                return tempCard;
-            }
-
-            return null;
-        }
-        public void PrintCard()
-        {
-            {
-                Random random = new Random();
-
-                for (int i = 0; i < 1000; i++)
-                {
-                    int a = random.Next(0, 52);
-                    int b = random.Next(0, 52);
-
-                    Card temp = Cards[a];
-                    Cards[a] = Cards[b];
-                    Cards[b] = temp;
-                    
-                }
-
-                for (int i = 0; i < 1; i++)
-                {
-                    Cards[i].Printcard();
-                    
-                  
-                }
-            }
-
-
-        }
+        
+       
     }
 }
