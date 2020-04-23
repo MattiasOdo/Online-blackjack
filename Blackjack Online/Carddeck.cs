@@ -81,16 +81,18 @@ namespace Blackjack_Online
                     Card temp = Cards[a];
                     Cards[a] = Cards[b];
                     Cards[b] = temp;
+                    
                 }
+
                 for (int i = 0; i < 1; i++)
                 {
                     Cards[i].Printcard();
                     
-                    
+                  
                 }
-               
             }
-           
+
+
         }
     }
 }
