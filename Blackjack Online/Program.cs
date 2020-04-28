@@ -35,10 +35,7 @@ namespace Blackjack_Online
                 string hit = "ja";
                 while(hit == "ja")
                 {
-                    c1.Printcard();
-                    c1.PrintValue();
-                    sum = c1.PrintValue() + c2.PrintValue();
-                    Console.WriteLine(sum);
+                    
 
                 }
 
