@@ -43,7 +43,7 @@ namespace Blackjack_Online
                 card = "King of Hearts";
                 this.value = 10;
             }
-            else if ((color == 0) && (value == 1))
+            else if ((color == 0) && (value == 0))
             {
                 card = "Ace of Hearts";
                 if (sum + 11 > 21)
@@ -77,7 +77,7 @@ namespace Blackjack_Online
                 card = "King of Clubs";
                 this.value = 10;
             }
-            else if ((color == 1) && (value == 1))
+            else if ((color == 1) && (value == 0))
             {
                 card = "Ace of Clubs";
                 if (sum + 11 > 21)
@@ -111,7 +111,7 @@ namespace Blackjack_Online
                 card = "King of Spades";
                 this.value = 10;
             }
-            else if ((color == 2) && (value == 1))
+            else if ((color == 2) && (value == 0))
             {
                 card = "Ace of Spades";
                 if (sum + 11 > 21)
@@ -146,7 +146,7 @@ namespace Blackjack_Online
                 card = "King of Diamonds";
                 this.value = 10;
             }
-            else if ((color == 3) && (value == 1))
+            else if ((color == 3) && (value == 0))
             {
                 card = "Ace of Diamonds";
                 if (sum + 11 > 21)
