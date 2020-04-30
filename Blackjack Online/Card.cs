@@ -165,7 +165,7 @@ namespace Blackjack_Online
         {
             Console.WriteLine(card);
         }
-        public int PrintValue()
+        public int GetValue()
         {
             return value;
         }

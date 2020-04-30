@@ -25,10 +25,10 @@ namespace Blackjack_Online
                 Console.WriteLine("");
 
                 c1.Printcard();
-                c1.PrintValue();
+                c1.GetValue();
                 c2.Printcard();
-                c2.PrintValue();
-                sum = c1.PrintValue() + c2.PrintValue();
+                c2.GetValue();
+                sum = c1.GetValue() + c2.GetValue();
                 Console.WriteLine("You have "+ sum +" points!");
                 Console.WriteLine("");
                 Console.WriteLine("Do you want another card?");
@@ -38,7 +38,7 @@ namespace Blackjack_Online
                     Card c = carddeck.GetFirstCard();
                     c.Printcard();
                     
-                    sum = sum + c.PrintValue();
+                    sum = sum + c.GetValue();
                     Console.WriteLine("You have " + sum + " points!");
 
                     if (sum == 21)
@@ -62,10 +62,6 @@ namespace Blackjack_Online
                         hit = "nej";
                     }
                 }
-
-
-
-
 
             }
         }
