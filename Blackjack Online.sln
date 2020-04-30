@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack Online", "Blackjack Online\Blackjack Online.csproj", "{8B73BF61-74C4-4424-8475-7B53A92EAB1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackSimpleServer", "C:\Users\tage0\source\repos\BlackJackSimpleServer\BlackJackSimpleServer.csproj", "{051B716C-0CAB-4708-8406-BBB250B49CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackClient", "C:\Users\tage0\source\repos\BlackJackClient\BlackJackClient.csproj", "{ABB00D54-C154-4ADF-BD3F-FFC86357F9FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8B73BF61-74C4-4424-8475-7B53A92EAB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B73BF61-74C4-4424-8475-7B53A92EAB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B73BF61-74C4-4424-8475-7B53A92EAB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{051B716C-0CAB-4708-8406-BBB250B49CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051B716C-0CAB-4708-8406-BBB250B49CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051B716C-0CAB-4708-8406-BBB250B49CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051B716C-0CAB-4708-8406-BBB250B49CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB00D54-C154-4ADF-BD3F-FFC86357F9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB00D54-C154-4ADF-BD3F-FFC86357F9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB00D54-C154-4ADF-BD3F-FFC86357F9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB00D54-C154-4ADF-BD3F-FFC86357F9FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
