@@ -20,10 +20,11 @@ namespace Blackjack_Online
             {
                 Console.WriteLine("How much do you want to bet? (Minimun 200$)");
                 bet = int.Parse(Console.ReadLine());
-                if (bet < 200)
+                while (bet < 200)
                 {
-                    Console.WriteLine("Your bet was to low");
-                    choice = "yes";
+                    Console.WriteLine("Your bet was to low, try again");
+                    bet = int.Parse(Console.ReadLine());
+
                 }
                 carddeck.ShuffleCards();
                 Card c1 = carddeck.GetFirstCard();
