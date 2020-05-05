@@ -47,7 +47,7 @@ namespace Blackjack_Online
         {
             Random random = new Random();
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1000000; i++)
             {
                 int a = random.Next(0, 52);
                 int b = random.Next(0, 52);
