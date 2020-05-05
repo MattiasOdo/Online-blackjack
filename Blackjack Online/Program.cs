@@ -11,8 +11,16 @@ namespace Blackjack_Online
         static void Main(string[] args)
         {
             int sum = 0;
+            /*List<Player> players =  Player();*/
+            List<Player> players;
+            players = new List<Player>();
             Carddeck carddeck = new Carddeck();
+            Dealer dealer = new Dealer();
             int bet = 0;
+
+            players.Add(new Player());
+            players.Add(new Player());
+
             carddeck.ShuffleCards();
             Console.WriteLine("Welcome to scam city! Do you want to play? (yes/no)");
             string choice = Console.ReadLine();
@@ -26,18 +34,26 @@ namespace Blackjack_Online
                     bet = int.Parse(Console.ReadLine());
 
                 }
+
+
+
+
                 carddeck.ShuffleCards();
-                Card c1 = carddeck.GetFirstCard();
-                Card c2 = carddeck.GetFirstCard();
+                players[0].AddCardToHand(carddeck.GetFirstCard());
+                players[1].AddCardToHand(carddeck.GetFirstCard());
+                players[0].AddCardToHand(carddeck.GetFirstCard());
+                players[1].AddCardToHand(carddeck.GetFirstCard());
+
 
                 Console.WriteLine("");
 
-                c1.Printcard();
-                c1.GetValue();
-                c2.Printcard();
-                c2.GetValue();
+                //c1.Printcard();
+                players[0].PrintCardValue(carddeck.GetValue());
+                //c1.GetValue();
+                //c2.Printcard();
+                //c2.GetValue();
                 sum = c1.GetValue() + c2.GetValue();
-                Console.WriteLine("You have "+ sum +" points!");
+                Console.WriteLine("You have " + sum + " points!");
                 Console.WriteLine("");
                 Console.WriteLine("Do you want another card?");
                 string hit = Console.ReadLine();
@@ -45,14 +61,14 @@ namespace Blackjack_Online
                 {
                     Card c = carddeck.GetFirstCard();
                     c.Printcard();
-                    
+
                     sum = sum + c.GetValue();
                     Console.WriteLine("You have " + sum + " points!");
 
                     if (sum == 21)
                     {
                         Console.WriteLine("");
-                        
+
                         bet = bet * 3;
                         Console.WriteLine("Congratulations you won " + bet + "!");
                         break;
@@ -62,7 +78,7 @@ namespace Blackjack_Online
                         Console.WriteLine("");
                         Console.WriteLine("You have less then 21 points. Do you want another card?");
                         hit = Console.ReadLine();
-                       
+
                         bet = bet * 2;
                     }
                     if (sum > 21)
@@ -72,13 +88,15 @@ namespace Blackjack_Online
                         hit = "nej";
                         Console.WriteLine("You lost " + bet);
                     }
-                   
+
                 }
                 if (hit == "no")
                 {
                     Console.WriteLine("You chose to stay at " + sum);
 
                 }
+
+                
             }
          
         }
