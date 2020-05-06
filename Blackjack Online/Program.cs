@@ -47,12 +47,10 @@ namespace Blackjack_Online
 
                 Console.WriteLine("");
 
-                //c1.Printcard();
-                players[0].PrintCardValue(carddeck.GetValue());
-                //c1.GetValue();
-                //c2.Printcard();
-                //c2.GetValue();
-                sum = c1.GetValue() + c2.GetValue();
+                Console.WriteLine(players[0].GetHandSum());
+                Console.WriteLine(players[1].GetHandSum());
+
+
                 Console.WriteLine("You have " + sum + " points!");
                 Console.WriteLine("");
                 Console.WriteLine("Do you want another card?");
