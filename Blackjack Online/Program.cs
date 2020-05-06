@@ -11,37 +11,44 @@ namespace Blackjack_Online
         static void Main(string[] args)
         {
             int sum = 0;
-            /*List<Player> players =  Player();*/
             List<Player> players;
             players = new List<Player>();
             Carddeck carddeck = new Carddeck();
             Dealer dealer = new Dealer();
             int bet = 0;
 
+
             players.Add(new Player());
             players.Add(new Player());
+
+
 
             carddeck.ShuffleCards();
             Console.WriteLine("Welcome to scam city! Do you want to play? (yes/no)");
             string choice = Console.ReadLine();
             if (choice == "yes")
             {
-                Console.WriteLine("How much do you want to bet? (Minimun 200$)");
-                bet = int.Parse(Console.ReadLine());
-                while (bet < 200)
-                {
-                    Console.WriteLine("Your bet was to low, try again");
-                    bet = int.Parse(Console.ReadLine());
 
+                foreach ( players in Player )
+                {
+                    Console.WriteLine("How much do you want to bet? (Minimun 200$)");
+                    bet = int.Parse(Console.ReadLine());
+                    while (bet < 200)
+                    {
+                        Console.WriteLine("Your bet was to low, try again");
+                        bet = int.Parse(Console.ReadLine());
+                    }
                 }
+                
 
 
 
 
                 carddeck.ShuffleCards();
                 players[0].AddCardToHand(carddeck.GetFirstCard());
-                players[1].AddCardToHand(carddeck.GetFirstCard());
                 players[0].AddCardToHand(carddeck.GetFirstCard());
+                Console.WriteLine("");
+                players[1].AddCardToHand(carddeck.GetFirstCard());
                 players[1].AddCardToHand(carddeck.GetFirstCard());
 
 

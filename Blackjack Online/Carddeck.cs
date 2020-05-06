@@ -21,10 +21,7 @@ namespace Blackjack_Online
             return null;
         }
 
-        public int GetValue()
-        {
-            return value;
-        }
+
 
         public Carddeck()
         {

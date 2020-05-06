@@ -22,12 +22,13 @@ namespace Blackjack_Online
         {
 
             cards.Add(card);
+            card.Printcard();
             sum += card.GetValue();
-            
         }
 
         public int GetHandSum()
         {
+            Console.WriteLine("You have " + sum + " points");
             return sum;
         }
 
