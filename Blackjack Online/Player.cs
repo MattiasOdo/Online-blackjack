@@ -12,10 +12,11 @@ namespace Blackjack_Online
 
         public int sum = 0;
         public int bet = 0;
+        public string name;
 
-        public Player()
+        public Player(string name)
         {
-            
+            this.name = name;
         }
 
         public void AddCardToHand(Card card)
@@ -26,9 +27,13 @@ namespace Blackjack_Online
             sum += card.GetValue();
         }
 
+        public string PlayerName()
+        {
+            return name;
+        }
+
         public int GetHandSum()
         {
-            Console.WriteLine("You have " + sum + " points");
             return sum;
         }
 

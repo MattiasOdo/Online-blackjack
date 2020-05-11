@@ -18,91 +18,89 @@ namespace Blackjack_Online
             int bet = 0;
 
 
-            players.Add(new Player());
-            players.Add(new Player());
+            
+
+            players.Add(new Player("Benne"));
+            players.Add(new Player("Matte"));
+            
 
 
-
-            carddeck.ShuffleCards();
-            Console.WriteLine("Welcome to scam city! Do you want to play? (yes/no)");
-            string choice = Console.ReadLine();
-            if (choice == "yes")
             {
+                carddeck.ShuffleCards();
 
-                foreach ( players in Player )
+                foreach ( Player p in players )
                 {
-                    Console.WriteLine("How much do you want to bet? (Minimun 200$)");
+                    
+                    Console.WriteLine(p.PlayerName() + " how much do you want to bet? " + " (Minimun 200$)");
                     bet = int.Parse(Console.ReadLine());
                     while (bet < 200)
                     {
                         Console.WriteLine("Your bet was to low, try again");
                         bet = int.Parse(Console.ReadLine());
                     }
+
                 }
-                
 
 
 
-
-                carddeck.ShuffleCards();
-                players[0].AddCardToHand(carddeck.GetFirstCard());
-                players[0].AddCardToHand(carddeck.GetFirstCard());
-                Console.WriteLine("");
-                players[1].AddCardToHand(carddeck.GetFirstCard());
-                players[1].AddCardToHand(carddeck.GetFirstCard());
-
-
-                Console.WriteLine("");
-
-                Console.WriteLine(players[0].GetHandSum());
-                Console.WriteLine(players[1].GetHandSum());
-
-
-                Console.WriteLine("You have " + sum + " points!");
-                Console.WriteLine("");
-                Console.WriteLine("Do you want another card?");
-                string hit = Console.ReadLine();
-                while (hit == "yes")
+                foreach( Player p in players)
                 {
-                    Card c = carddeck.GetFirstCard();
-                    c.Printcard();
+                    Console.WriteLine(p.PlayerName() + " your cards are :");
+                    p.AddCardToHand(carddeck.GetFirstCard());
+                    p.AddCardToHand(carddeck.GetFirstCard());
+                    Console.WriteLine("");
+                    Console.WriteLine(p.PlayerName() + " you have " + p.GetHandSum() + " points!");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
 
-                    sum = sum + c.GetValue();
-                    Console.WriteLine("You have " + sum + " points!");
-
-                    if (sum == 21)
+                    Console.WriteLine("Do you want another card? " + p.PlayerName());
+                    string hit = Console.ReadLine();
+                    while (hit == "yes")
                     {
-                        Console.WriteLine("");
+                        Card c = carddeck.GetFirstCard();
+                        p.AddCardToHand(carddeck.GetFirstCard());
+                        sum = sum + p.GetHandSum();
+                        Console.WriteLine("You have " + sum + " points!");
 
-                        bet = bet * 3;
-                        Console.WriteLine("Congratulations you won " + bet + "!");
-                        break;
+                        if (sum == 21)
+                        {
+                            Console.WriteLine("");
+
+                            bet = bet * 3;
+                            Console.WriteLine("Congratulations you won " + bet + "!");
+                            break;
+                        }
+                        if (sum < 21)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("You have less then 21 points. Do you want another card?");
+                            hit = Console.ReadLine();
+
+                            bet = bet * 2;
+                        }
+                        if (sum > 21)
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("You got more then 21 points. You just lost!");
+                            hit = "nej";
+                            Console.WriteLine("You lost " + bet);
+                        }
+
                     }
-                    if (sum < 21)
+                    if (hit == "no")
                     {
-                        Console.WriteLine("");
-                        Console.WriteLine("You have less then 21 points. Do you want another card?");
-                        hit = Console.ReadLine();
+                        Console.WriteLine("You chose to stay at " + sum);
 
-                        bet = bet * 2;
                     }
-                    if (sum > 21)
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("You got more then 21 points. You just lost!");
-                        hit = "nej";
-                        Console.WriteLine("You lost " + bet);
-                    }
-
                 }
-                if (hit == "no")
-                {
-                    Console.WriteLine("You chose to stay at " + sum);
-
-                }
-
-                
             }
+
+
+
+
+
+
+            
          
         }
     }
