@@ -40,9 +40,6 @@ namespace Blackjack_Online
                     }
 
                 }
-
-
-
                 foreach( Player p in players)
                 {
                     Console.WriteLine(p.PlayerName() + " your cards are :");
@@ -53,46 +50,9 @@ namespace Blackjack_Online
                     Console.WriteLine("");
                     Console.WriteLine("");
 
-                    Console.WriteLine("Do you want another card? " + p.PlayerName());
-                    string hit = Console.ReadLine();
-                    while (hit == "yes")
-                    {
-                        Card c = carddeck.GetFirstCard();
-                        p.AddCardToHand(carddeck.GetFirstCard());
-                        sum = sum + p.GetHandSum();
-                        Console.WriteLine("You have " + sum + " points!");
-
-                        if (sum == 21)
-                        {
-                            Console.WriteLine("");
-
-                            bet = bet * 3;
-                            Console.WriteLine("Congratulations you won " + bet + "!");
-                            break;
-                        }
-                        if (sum < 21)
-                        {
-                            Console.WriteLine("");
-                            Console.WriteLine("You have less then 21 points. Do you want another card?");
-                            hit = Console.ReadLine();
-
-                            bet = bet * 2;
-                        }
-                        if (sum > 21)
-                        {
-                            Console.WriteLine("");
-                            Console.WriteLine("You got more then 21 points. You just lost!");
-                            hit = "nej";
-                            Console.WriteLine("You lost " + bet);
-                        }
-
-                    }
-                    if (hit == "no")
-                    {
-                        Console.WriteLine("You chose to stay at " + sum);
-
-                    }
+                    
                 }
+
             }
 
 
