@@ -14,7 +14,6 @@ namespace Blackjack_Online
             List<Player> players;
             players = new List<Player>();
             Carddeck carddeck = new Carddeck();
-            Dealer dealer = new Dealer();
             int bet = 0;
 
             players.Add(new Player("Benne"));
@@ -69,19 +68,16 @@ namespace Blackjack_Online
                             break;
                         }
                         else if (p.GetHandSum() <= 21)
-                        {
-                            
+                        { 
                             Console.WriteLine("Yo Pierre you got " + p.GetHandSum() + " and it is less then 21! Do want another card?");
                             hit = Console.ReadLine();
                             Console.WriteLine("");
-
                         }
                     }
                     if (hit == "no")
                     {
                         Console.WriteLine("Yo Pierre you chose to stay at " + p.GetHandSum());
                         Console.WriteLine("");
-                        
                     }
 
                 }
