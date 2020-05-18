@@ -45,7 +45,7 @@ namespace Blackjack_Online
                 }
                 foreach (Player p in players)
                 {
-                    Console.WriteLine(p.PlayerName() + " do want another card? (yes/no)");
+                    Console.WriteLine(p.PlayerName() + " do want another card? You have " + p.GetHandSum() + " points! (yes/no)");
                     string hit = Console.ReadLine();
                     while (hit == "yes")
                     {
@@ -61,20 +61,20 @@ namespace Blackjack_Online
                         }
                         else if (p.GetHandSum() >= 21)
                         {
-                            Console.WriteLine("You have " + p.GetHandSum() + " and lost " + bet);
+                            Console.WriteLine(p.PlayerName() + " you have " + p.GetHandSum() + " and lost " + bet);
                             Console.WriteLine("");
                             break;
                         }
                         else if (p.GetHandSum() <= 21)
                         { 
-                            Console.WriteLine("You have " + p.GetHandSum() + " points and it is less then 21! Do want another card?");
+                            Console.WriteLine(p.PlayerName() + " you have " + p.GetHandSum() + " points and it is less then 21! Do want another card?");
                             hit = Console.ReadLine();
                             Console.WriteLine("");
                         }
                     }
                     if (hit == "no")
                     {
-                        Console.WriteLine("Yo Pierre you chose to stay at " + p.GetHandSum());
+                        Console.WriteLine(p.PlayerName() + " you chose to stay at " + p.GetHandSum());
                         Console.WriteLine("");
                     }
                 }
