@@ -10,9 +10,7 @@ namespace Blackjack_Online
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
 
-=======
             int sum = 0;
             List<Player> players;
             players = new List<Player>();
@@ -82,7 +80,7 @@ namespace Blackjack_Online
                     }
                 }
             }
->>>>>>> fungerandeblackjack
+
         }
     }
 }
