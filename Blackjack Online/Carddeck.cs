@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blackjack_Online
 {
-    class Carddeck:Card
+    class Carddeck
     {
         List<Card> Cards;
 
